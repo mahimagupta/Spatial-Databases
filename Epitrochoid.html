@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+var a = 5, b = 3, c = 5;
+var x, y;
+for (var t = 0.0; t < Math.PI * 10; t += 0.01) 
+{
+    x = (a + b) * Math.cos(t) - c * Math.cos(( a / b + 1) * t);
+    x += 34.0208047;
+    y = (a + b) * Math.sin(t) - c * Math.sin((a / b + 1) * t);
+    y += -118.2894285;
+	document.write(y+","+x+",0<br>");
+}
+</script>		
+
+</body>
+</html>
