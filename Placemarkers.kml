@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.0">
+<Document>
+<Style id="z1">
+<IconStyle><Icon><href>http://www.google.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href></Icon></IconStyle>
+</Style>
+<Placemark><name>Home</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.282568,34.030775</coordinates></Point>
+</Placemark>
+<Placemark><name>Study Hall</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.283731,34.028771</coordinates></Point>
+</Placemark>
+<Placemark><name>Engemann</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.288678,34.026605</coordinates></Point>
+</Placemark>
+<Placemark><name>Marshall</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.2879678 34.0188291</coordinates></Point>
+</Placemark>
+<Placemark><name>Viterbi</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.288824,34.020633</coordinates></Point>
+</Placemark>
+<Placemark><name>Bookstore</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.286525,34.021073</coordinates></Point>
+</Placemark>
+<Placemark><name>Leavey</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.282940,34.022131</coordinates></Point>
+</Placemark>
+<Placemark><name>Trader Joe's</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.284753,34.025881</coordinates></Point>
+</Placemark>
+<Placemark><name>Ralphs</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.290782,34.032112</coordinates></Point>
+</Placemark>
+<Placemark><name>Manas Cuisine</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.291812,34.029903</coordinates></Point>
+</Placemark>
+</Document></kml>
