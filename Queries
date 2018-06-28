@@ -1,0 +1,24 @@
+postgres=> CREATE EXTENSION PostGIS;
+
+postgres=> CREATE TABLE PLACES (Name VARCHAR(15), Location geometry);
+
+postgres=> INSERT INTO PLACES (Name, Location)
+postgres-> VALUES
+postgres-> ('Home',ST_GeomFromText('POINT(-118.282568 34.030775)')),
+postgres-> ('Study Hall',ST_GeomFromText('POINT(-118.283731 34.028771)')),
+postgres-> ('Engemann',ST_GeomFromText('POINT(-118.288678 34.026605)')),
+postgres-> ('Marshall',ST_GeomFromText('POINT(-118.2879678 34.0188291)')),
+postgres-> ('Viterbi',ST_GeomFromText('POINT(-118.288824 34.020633)')),
+postgres-> ('Bookstore',ST_GeomFromText('POINT(-118.286525 34.021073)')),
+postgres-> ('Leavey',ST_GeomFromText('POINT(-118.282940 34.022131)')),
+postgres-> ('Trader Joes',ST_GeomFromText('POINT(-118.284753 34.025881)')),
+postgres-> ('Ralphs',ST_GeomFromText('POINT(-118.290782 34.032112)')),
+postgres-> ('Manas Cuisine',ST_GeomFromText('POINT(-118.291812 34.029903)'));
+
+postgres=> SELECT ST_AsText(ST_ConvexHull(ST_Collect(location))) FROM PLACES;
+
+postgres=> SELECT  ST_AsText(ST_MakePolygon(ST_GeomFromText('LINESTRING(-118.282568 34.030775,-118.283731 34.028771,-118.288678 34.026605,-118.290782 34.032112,-118.291812 34.029903,-118.282568 34.030775)')));
+ 
+postgres=> SELECT  ST_AsText(ST_MakePolygon(ST_GeomFromText('LINESTRING(-118.2879678 34.0188291,-118.288824 34.020633,-118.286525 34.021073,-118.282940 34.022131,-118.284753 34.025881,-118.2879678 34.0188291)')));
+  
+postgres=> SELECT ST_Disjoint(A,B) As  Disjoint_Result FROM (SELECT ST_GeomFromText('POLYGON((-118.282568 34.030775,-118.283731 34.028771,-118.288678 34.026605,-118.290782 34.032112,-118.291812 34.029903,-118.282568 34.030775))') As A, ST_GeomFromText('POLYGON((-118.2879678 34.0188291,-118.288824 34.020633,-118.286525 34.021073,-118.28294 34.022131,-118.284753 34.025881,-118.2879678 34.0188291))') As B) As foo;
